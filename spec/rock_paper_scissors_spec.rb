@@ -1,7 +1,7 @@
 require('rspec')
 require('rock_paper_scissors')
 
-describe('string#rock_paper_scissors') do
+describe('string#beats?') do
 
   it("returns true if rock is the object and scissors is the argument") do
     expect("rock".beats?("scissors")).to(eq(true))
@@ -23,6 +23,9 @@ describe('string#rock_paper_scissors') do
     expect("rock".beats?("rock")).to(eq(false))
   end
 
+  it("returns 'player 1 wins' when determine_winner method is called on rock & scissors") do
+    expect("rock".determine_winner("scissors")).to(eq("Player 1 wins"))
+  end
 
 
 end
