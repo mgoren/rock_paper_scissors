@@ -31,4 +31,8 @@ describe('string#beats?') do
     expect("sdlkfjsdf".determine_winner("rock")).to(eq("Invalid entry. Try again."))
   end
 
+  it("works as a one player game with computer always choosing paper") do
+      expect("rock".play()).to(eq("Computer wins"))
+  end
+  
 end

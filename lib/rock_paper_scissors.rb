@@ -43,6 +43,21 @@ class String
       end
 
       winner_string
-
   end
+
+  define_method(:play) do
+    input = self
+    tools = ["rock","paper","scissors"]
+    computer = tools[rand(3)]
+
+    winner_string = input.determine_winner(computer)
+
+    if winner_string == "Player 2 wins"
+      winner_string = "Computer wins"
+    end
+
+    winner_string
+  end
+
+
 end

@@ -9,7 +9,7 @@ end
 
 get('/results') do
   input1 = params.fetch('input1')
-  input2 = params.fetch('input2')
-  @winner_string = input1.determine_winner(input2)
+#  input2 = params.fetch('input2')
+  @winner_string = input1.play()
   erb(:results)
 end
