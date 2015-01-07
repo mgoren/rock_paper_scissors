@@ -27,5 +27,8 @@ describe('string#beats?') do
     expect("rock".determine_winner("scissors")).to(eq("Player 1 wins"))
   end
 
+  it("informs user if invalid input is entered") do
+    expect("sdlkfjsdf".determine_winner("rock")).to(eq("Invalid entry. Try again."))
+  end
 
 end

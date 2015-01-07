@@ -38,6 +38,10 @@ class String
         winner_string = "tie"
       end
 
+      if (input1 != "rock" && input1 != "scissors" && input1 != "paper") || (input2 != "rock" && input2 != "scissors" && input2 != "paper")
+        winner_string = "Invalid entry. Try again."
+      end
+
       winner_string
 
   end
